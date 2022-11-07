@@ -6,17 +6,15 @@ import {
   Patch,
   Param,
   Delete,
-} from '@nestjs/common';
-import { ApiTags } from '@nestjs/swagger';
+} from "@nestjs/common";
+import { ApiTags } from "@nestjs/swagger";
 
-import { CarService } from './car.service';
+import { CarService } from "./car.service";
+import { CreateCarDto } from "./dto/create-car.dto";
+import { UpdateCarDto } from "./dto/update-car.dto";
 
-import { CreateCarDto } from './dto/create-car.dto';
-
-import { UpdateCarDto } from './dto/update-car.dto';
-
-@ApiTags('cars')
-@Controller('car')
+@ApiTags("cars")
+@Controller("car")
 export class CarController {
   constructor(private readonly carService: CarService) {}
 
@@ -30,18 +28,18 @@ export class CarController {
     return this.carService.findAll();
   }
 
-  @Get(':id')
-  findOne(@Param('id') id: string) {
+  @Get(":id")
+  findOne(@Param("id") id: string) {
     return this.carService.findOne(+id);
   }
 
-  @Patch(':id')
-  update(@Param('id') id: string, @Body() updateCarDto: UpdateCarDto) {
+  @Patch(":id")
+  update(@Param("id") id: string, @Body() updateCarDto: UpdateCarDto) {
     return this.carService.update(+id, updateCarDto);
   }
 
-  @Delete(':id')
-  remove(@Param('id') id: string) {
+  @Delete(":id")
+  remove(@Param("id") id: string) {
     return this.carService.remove(+id);
   }
 }

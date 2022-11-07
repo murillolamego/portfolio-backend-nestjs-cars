@@ -1,10 +1,10 @@
-import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
-import { PrismaService } from 'src/prisma.service';
+import { PrismaService } from "src/prisma.service";
 
-import { CreateCarDto } from './dto/create-car.dto';
+import { HttpException, HttpStatus, Injectable } from "@nestjs/common";
 
-import { UpdateCarDto } from './dto/update-car.dto';
-import { Car } from './entities/car.entity';
+import { CreateCarDto } from "./dto/create-car.dto";
+import { UpdateCarDto } from "./dto/update-car.dto";
+import { Car } from "./entities/car.entity";
 
 @Injectable()
 export class CarService {
@@ -19,7 +19,7 @@ export class CarService {
       throw new HttpException(
         {
           status: HttpStatus.BAD_REQUEST,
-          error: 'Invalid plate provided',
+          error: "Invalid plate provided",
         },
         HttpStatus.BAD_REQUEST,
       );
@@ -33,7 +33,7 @@ export class CarService {
       throw new HttpException(
         {
           status: HttpStatus.BAD_REQUEST,
-          error: 'Invalid chassis provided',
+          error: "Invalid chassis provided",
         },
         HttpStatus.BAD_REQUEST,
       );
@@ -47,7 +47,7 @@ export class CarService {
       throw new HttpException(
         {
           status: HttpStatus.BAD_REQUEST,
-          error: 'Invalid car maker provided',
+          error: "Invalid car maker provided",
         },
         HttpStatus.BAD_REQUEST,
       );
@@ -61,7 +61,7 @@ export class CarService {
       throw new HttpException(
         {
           status: HttpStatus.BAD_REQUEST,
-          error: 'Invalid car model provided',
+          error: "Invalid car model provided",
         },
         HttpStatus.BAD_REQUEST,
       );
@@ -102,7 +102,7 @@ export class CarService {
       throw new HttpException(
         {
           status: HttpStatus.BAD_REQUEST,
-          error: 'Invalid id provided',
+          error: "Invalid id provided",
         },
         HttpStatus.BAD_REQUEST,
       );
@@ -120,7 +120,7 @@ export class CarService {
       throw new HttpException(
         {
           status: HttpStatus.BAD_REQUEST,
-          error: 'Invalid plate provided',
+          error: "Invalid plate provided",
         },
         HttpStatus.BAD_REQUEST,
       );
@@ -134,7 +134,7 @@ export class CarService {
       throw new HttpException(
         {
           status: HttpStatus.BAD_REQUEST,
-          error: 'Invalid chassis provided',
+          error: "Invalid chassis provided",
         },
         HttpStatus.BAD_REQUEST,
       );
@@ -152,7 +152,7 @@ export class CarService {
       throw new HttpException(
         {
           status: HttpStatus.BAD_REQUEST,
-          error: 'Invalid id provided',
+          error: "Invalid id provided",
         },
         HttpStatus.BAD_REQUEST,
       );
@@ -166,7 +166,7 @@ export class CarService {
       throw new HttpException(
         {
           status: HttpStatus.BAD_REQUEST,
-          error: 'Invalid car maker provided',
+          error: "Invalid car maker provided",
         },
         HttpStatus.BAD_REQUEST,
       );
@@ -180,7 +180,7 @@ export class CarService {
       throw new HttpException(
         {
           status: HttpStatus.BAD_REQUEST,
-          error: 'Invalid car model provided',
+          error: "Invalid car model provided",
         },
         HttpStatus.BAD_REQUEST,
       );
@@ -215,7 +215,7 @@ export class CarService {
       throw new HttpException(
         {
           status: HttpStatus.BAD_REQUEST,
-          error: 'Invalid id provided',
+          error: "Invalid id provided",
         },
         HttpStatus.BAD_REQUEST,
       );
